@@ -1,1 +1,27 @@
 /*TODO: Make this...*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header p {
+    margin-top: 0.01em;
+    line-height: 0.8em;
+}
+
+header {
+    background-color: antiquewhite;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+}
+
+footer {
+    background-color: antiquewhite;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
