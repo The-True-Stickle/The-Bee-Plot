@@ -4,9 +4,10 @@ title: 'Test Blog'
 pubDate: 2026-10-10
 description: 'My test blog post'
 author: 'Bee Bothello'
+setup:
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'A test blog post image'
+    imagePath: '/src/blog-images/Wildcat.jpg'
+    altText: 'A test blog post image'
 tags: ["test", "desperation"]
 ---
 
