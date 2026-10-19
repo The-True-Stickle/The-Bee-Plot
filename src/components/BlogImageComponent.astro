@@ -14,4 +14,4 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/blog-images/*.
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/blog-images/*.{jpeg,jpg,png,gif}"`);
 ---
 
-<Image src={images[imagePath]()} alt={altText} />
+<Image src={images[imagePath]()} alt={altText} width="300" height="200"/>

@@ -1,13 +1,38 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import aboutMePhoto from "../blog-images/Universal.jpg"
+import BlogComponent from '../components/BlogComponent.astro'
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const pageTitle = "The Bee Plot";
 ---
 
 <html lang="en">
 
 	<BaseLayout pageTitle={pageTitle}>
-		<h1>This is the homepage</h1>
-		<h2>Isn't that cool?</h2>
+		<hgroup>
+			<h1>Welcome to the Bee Plot.</h1>
+			<p>A blog focused on the side thoughts, ideas, and creations from me, Bee Bothello</p>
+		</hgroup>
+
+		<section class="about-me">
+			<h2>About Me</h2>
+			<figure>
+				<Image src={aboutMePhoto} alt="Photo of me, Bowen (Bee) Bothello" width="300" />
+				<figcaption>Pleak</figcaption>
+			</figure>
+			<h3>Bowen ("Bee") Bothello</h3>
+			<h4>Software Engineer, Interactive Designer, Product Manager</h4>
+			<p>A programmer and designer currently studying computer science at U.C. San Diego. Having worked on projects from the commercial release of "Deitrus" to the design of amusement attractions, they focus on crafting experiences which are intuitive, heartfelt, and perhaps a tad, bombastic.</p>
+		</section>
+
+		<section class="recent-posts">
+			<h2>Recent Posts</h2>
+			<ul>
+				{allPosts.map((post: any) => <BlogComponent url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} imagePath={post.frontmatter.image.imagePath} altText={post.frontmatter.image.altText} pubDate={post.frontmatter.pubDate}/>)}
+			</ul>
+		</section>
+
 	</BaseLayout>
 
 </html>
