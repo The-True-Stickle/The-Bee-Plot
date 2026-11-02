@@ -2,11 +2,9 @@
 const { url, title, description, imagePath, altText, pubDate } = Astro.props;
 import BlogImageComponent from '../components/BlogImageComponent.astro'
 ---
-<li>
+<li class="blog-component">
     <BlogImageComponent imagePath={imagePath} altText={altText} />
     <p>{description}</p>
     <a href={url}>{title}</a>
     <time datetime={pubDate}>{pubDate.toString().slice(0,10)}</time>
-
-
 </li>

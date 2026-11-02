@@ -5,8 +5,9 @@ const pageTitle = "Blog Posts";
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
 <BaseLayout pageTitle={pageTitle}>
+    <h1>Recent Posts</h1>
     <p>I will list blog posts here</p>
-    <ul>
+    <ul class="blog-container">
         {allPosts.map((post: any) => <BlogComponent url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} imagePath={post.frontmatter.image.imagePath} altText={post.frontmatter.image.altText} pubDate={post.frontmatter.pubDate}/>)}
     </ul>
 </BaseLayout>
