@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import { Font } from "astro:assets";
 const { pageTitle } = Astro.props;
 ---
 <html lang="en">
@@ -10,6 +11,7 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-roboto-mono" />
     <title>{pageTitle}</title>
   </head>
   <body>

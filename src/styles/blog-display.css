@@ -1,0 +1,17 @@
+/* Grid information: https://www.joshwcomeau.com/css/interactive-guide-to-grid/ */
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: subgrid;
+    gap: 1em;
+    list-style-type: none;
+    margin: 2em;
+    padding: 0;
+    justify-content: center;
+    justify-items: center;
+}
+
+.blog-component {
+    border: 0.1em solid black;
+    padding: 0.4em;
+}

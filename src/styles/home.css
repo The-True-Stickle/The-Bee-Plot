@@ -1,0 +1,39 @@
+
+
+body {
+    font-family: var(--font-roboto-mono), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: grid;
+    /*place-items: center;
+    min-height: 100vh; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "title subtitle"
+    "about about"
+    "post post"
+    "footer footer";
+}
+
+.home-title {
+    grid-area: title;
+}
+
+.home-subtitle {
+    grid-area: subtitle;
+}
+
+.about-me {
+    grid-area: about;
+}
+
+.recent-posts {
+    grid-area: post;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}

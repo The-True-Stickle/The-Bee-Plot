@@ -3,6 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from 'astro:assets';
 import aboutMePhoto from "../blog-images/Universal.jpg"
 import BlogComponent from '../components/BlogComponent.astro'
+import '../styles/blog-display.css';
+import '../styles/home.css';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const pageTitle = "The Bee Plot";
 ---
@@ -11,8 +13,8 @@ const pageTitle = "The Bee Plot";
 
 	<BaseLayout pageTitle={pageTitle}>
 		<hgroup>
-			<h1>Welcome to the Bee Plot.</h1>
-			<p>A blog focused on the side thoughts, ideas, and creations from me, Bee Bothello</p>
+			<h1 class="home-title">Welcome to the Bee Plot.</h1>
+			<p class="home-subtitle">A blog focused on the side thoughts, ideas, and creations from me, Bee Bothello</p>
 		</hgroup>
 
 		<section class="about-me">
